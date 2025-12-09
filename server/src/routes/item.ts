@@ -3,7 +3,7 @@ import ItemController from "../controllers/item-controller";
 import multer from "multer";
 
 const storage = multer.diskStorage({
-  destination: "public/img",
+  destination: "public/items",
   filename(req, file, callback) {
     const imageName = file.originalname.split(".").shift();
     const imageExt = file.originalname.split(".").pop();
