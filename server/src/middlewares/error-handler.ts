@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from "express";
 import CustomError from "../helpers/errors/custom-error";
 import { ZodError } from "zod";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import { JsonWebTokenError } from "jsonwebtoken";
 import cleanNullishValue from "../helpers/clean-nullish-value";
+import { PrismaClientKnownRequestError } from "../generated/prisma/internal/prismaNamespace";
 
 export default function errorHandler(
   err: Error,
